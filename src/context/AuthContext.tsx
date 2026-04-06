@@ -30,14 +30,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loginWithGoogle = async () => {
     try {
+      setLoading(true);
       await signInWithPopup(auth, googleProvider);
       router.push("/dashboard");
     } catch (error: any) {
+      setLoading(false);
       if (error.code === "auth/popup-closed-by-user") {
         console.warn("Sign-in popup closed by user.");
-        return;
+      } else if (error.code === "auth/cancelled-popup-request") {
+        console.warn("Only one popup at a time allowed.");
+      } else {
+        console.error("Login Error:", error);
       }
-      console.error("Login Error:", error);
     }
   };
 
