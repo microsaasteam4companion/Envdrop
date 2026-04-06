@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Shield, ChevronLeft, Calendar, Clock, ArrowRight, Tag } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 import Link from "next/link";
 
 import { blogData } from "@/data/blogs";
@@ -39,10 +40,10 @@ export default function BlogsPage() {
         background: 'var(--nav-bg)',
       }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'var(--foreground)', fontWeight: 800, fontSize: '1.2rem' }}>
-          <div style={{ width: '32px', height: '32px', background: 'linear-gradient(135deg, #6366f1, #a855f7)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(99,102,241,0.3)' }}>
-            <Shield size={18} />
+          <div style={{ width: '40px', height: '40px', background: 'linear-gradient(135deg, #6366f1, #a855f7)', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(99,102,241,0.3)' }}>
+            <BrandLogo size={24} />
           </div>
-          envdrop
+          envdrop <span style={{ color: 'var(--brand-primary)', marginLeft: '0.5rem' }}>Blog</span>
         </Link>
         <Link
           href="/"

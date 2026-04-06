@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function TermsPage() {
   return (
@@ -13,8 +14,8 @@ export default function TermsPage() {
         </Link>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <div style={{ width: '48px', height: '48px', background: 'rgba(99,102,241,0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: '#818cf8' }}>
-            <Shield size={24} />
+          <div style={{ marginBottom: '1.5rem' }}>
+            <BrandLogo size={48} />
           </div>
           <h1 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.02em' }}>Terms of Service</h1>
           <p style={{ color: '#64748b', marginBottom: '4rem' }}>Last Updated: April 04, 2026</p>

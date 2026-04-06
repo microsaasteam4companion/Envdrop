@@ -10,6 +10,7 @@ import {
   AlertCircle, ShieldAlert, Globe, Server, CheckCircle,
   Key, Fingerprint, Activity, Terminal, HelpCircle, Menu
 } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 import { getOrCreateVaultKey, getLocalKey, setVaultKey, resetVaultKey } from "@/lib/vault";
 import Link from "next/link";
 import styles from "@/app/page.module.css";
@@ -386,12 +387,17 @@ export default function Dashboard() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'var(--sidebar-text)' }}>
-            <div style={{ width: '32px', height: '32px', background: 'linear-gradient(135deg, #6366f1, #a855f7)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(99,102,241,0.3)' }}>
-              <Shield size={20} />
+          <Link href="/" style={{ textDecoration: 'none', marginBottom: '2.5rem', display: 'block' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <BrandLogo size={32} />
+              <span style={{ 
+                fontSize: '1.25rem', 
+                fontWeight: 900, 
+                color: 'white', 
+                letterSpacing: '-0.02em'
+              }}>envdrop</span>
             </div>
-            <span style={{ fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.02em', color: 'var(--sidebar-text)' }}>envdrop</span>
-          </div>
+          </Link>
           {isMobile && (
             <button onClick={() => setIsSidebarOpen(false)} style={{ color: 'var(--sidebar-muted)', background: 'rgba(128,128,128,0.1)', border: 'none', padding: '0.4rem', borderRadius: '8px' }}>
               <X size={20} />

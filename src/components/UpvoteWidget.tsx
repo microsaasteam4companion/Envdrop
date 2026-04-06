@@ -79,7 +79,7 @@ export default function UpvoteWidget() {
            data-email={userData?.email || ''}
            data-position="right"
            data-theme="light"
-           data-logo-url="https://envdrop.entrext.com/logo.png"
+           data-logo-url="https://envdrop.entrext.com/favicon.svg"
            data-product-overview="envdrop is a premium, zero-knowledge secret sharing platform designed for modern developers."
            data-about-text="Secure your environment variables with AES-256-GCM encryption. Built for security-first teams."
            data-faqs={faqs}>

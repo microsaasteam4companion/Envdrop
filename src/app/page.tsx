@@ -13,6 +13,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import BrandLogo from "@/components/BrandLogo";
 
 export default function Home() {
   const { user } = useAuth();
@@ -51,8 +52,8 @@ export default function Home() {
           {/* LEFT: LOGO */}
           <div style={{ flex: isMobile ? 'none' : 1, display: 'flex', justifyContent: 'flex-start' }}>
             <Link href="/" className={styles.logo} style={{ textDecoration: 'none', color: 'white', fontWeight: 800 }}>
-              <div style={{ width: '32px', height: '32px', background: 'var(--brand-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Shield size={20} color="white" />
+              <div style={{ width: '32px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <BrandLogo size={32} />
               </div>
               {!isMobile && "envdrop"}
             </Link>

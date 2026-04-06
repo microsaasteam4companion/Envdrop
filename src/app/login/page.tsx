@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Shield, Lock, ChevronRight, Mail, Globe, Sparkles, Fingerprint, LucideIcon, Loader2 } from "lucide-react";
+import { Lock, ChevronRight, Mail, Globe, Sparkles, Fingerprint, LucideIcon, Loader2 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
+import BrandLogo from "@/components/BrandLogo";
 import styles from "@/app/page.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -30,7 +31,7 @@ export default function LoginPage() {
     return (
       <main style={{ background: '#020617', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1 }}>
-          <Shield size={40} color="#6366f1" />
+          <BrandLogo size={40} />
         </motion.div>
       </main>
     );
@@ -67,10 +68,7 @@ export default function LoginPage() {
         zIndex: 10
       }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'white', fontWeight: 800, fontSize: '1.25rem' }}>
-          <div style={{ width: '32px', height: '32px', background: 'linear-gradient(135deg, #6366f1, #a855f7)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 20px rgba(99,102,241,0.3)' }}>
-            <Shield size={20} />
-          </div>
-          {!isMobile && "envdrop"}
+          <BrandLogo size={32} showText={!isMobile} />
         </Link>
         <Link href="/" style={{ color: '#94a3b8', fontSize: '0.9rem', fontWeight: 500, textDecoration: 'none' }}>
            Back to home

@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M50 5L90 25V55C90 75 75 90 50 95C25 90 10 75 10 55V25L50 5Z"
+    fill="url(#brand-grad)"
+  />
+  <path
+    d="M50 30C38 30 30 42 30 55C30 68 39 76 50 76C61 76 70 68 70 55C70 42 62 30 50 30ZM50 35C50 35 60 48 60 55C60 62 55 68 50 68C45 68 40 62 40 55C40 48 50 35 50 35Z"
+    fill="white"
+    fill-opacity="0.8"
+  />
+</svg>

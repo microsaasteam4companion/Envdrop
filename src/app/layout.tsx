@@ -34,7 +34,10 @@ export const metadata: Metadata = {
     title: "envdrop | Secure .env Sharing",
     description: "Stop sharing secrets in plain text. Use envdrop.",
     images: ["/og-image.png"],
-  }
+  },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export const viewport = {
