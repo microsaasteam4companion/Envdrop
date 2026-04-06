@@ -40,7 +40,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       } else if (error.code === "auth/cancelled-popup-request") {
         console.warn("Only one popup at a time allowed.");
       } else {
-        console.error("Login Error:", error);
+        console.error("Login Error Details:", error);
+        alert(`Login Failed: ${error.message}\n\nCommon Fix: Add this domain to your Firebase 'Authorized Domains'.`);
       }
     }
   };
