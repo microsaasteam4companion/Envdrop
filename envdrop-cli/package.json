@@ -1,0 +1,38 @@
+{
+  "name": "envdrop-cli",
+  "version": "1.0.0",
+  "description": "The official envdrop Universal CLI for secure, zero-knowledge secret sharing.",
+  "main": "./dist/index.js",
+  "bin": {
+    "envdrop": "./dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "security",
+    "dotenv",
+    "secrets",
+    "encryption",
+    "cli"
+  ],
+  "author": "envdrop",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "conf": "^11.0.2",
+    "node-fetch": "^3.3.2",
+    "open": "^11.0.0",
+    "ora": "^7.0.1",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/prompts": "^2.4.9",
+    "typescript": "^5.3.2"
+  }
+}
